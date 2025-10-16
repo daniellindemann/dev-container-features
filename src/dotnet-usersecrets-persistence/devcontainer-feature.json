@@ -8,7 +8,7 @@
     "mounts": [
         {
             "source": "${devcontainerId}-dotnet-usersecrets",
-            "target": "/home/${remoteUser}/.microsoft/usersecrets",
+            "target": "/dc/dotnet-usersecrets",
             "type": "volume"
         }
     ],
