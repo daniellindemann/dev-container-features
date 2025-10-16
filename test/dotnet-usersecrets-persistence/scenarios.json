@@ -1,0 +1,8 @@
+{
+    "dotnet-usersecrets-persistence": {
+        "image": "mcr.microsoft.com/devcontainers/dotnet:1-9.0-bookworm",
+        "features": {
+            "dotnet-usersecrets-persistence": {}
+        }
+    }
+}
