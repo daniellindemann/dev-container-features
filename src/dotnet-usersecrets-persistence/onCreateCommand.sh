@@ -19,17 +19,17 @@ fix_permissions() {
     local dir="${1}"
 
     # Create directory if it doesn't exist
-    if [ ! -d "${dir}" ]; then
-        log "Creating directory '${dir}'..."
-        mkdir -p "${dir}" 2>/dev/null || {
-            if command -v sudo >/dev/null 2>&1; then
-                sudo mkdir -p "${dir}"
-            else
-                log "ERROR: Cannot create directory '${dir}' and sudo not available"
-                return 1
-            fi
-        }
-    fi
+    # if [ ! -d "${dir}" ]; then
+    #     log "Creating directory '${dir}'..."
+    #     mkdir -p "${dir}" 2>/dev/null || {
+    #         if command -v sudo >/dev/null 2>&1; then
+    #             sudo mkdir -p "${dir}"
+    #         else
+    #             log "ERROR: Cannot create directory '${dir}' and sudo not available"
+    #             return 1
+    #         fi
+    #     }
+    # fi
 
     # Check if we already own the directory and have write access
     if [ -O "${dir}" ] && [ -w "${dir}" ]; then
